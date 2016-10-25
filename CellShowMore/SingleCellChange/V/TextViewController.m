@@ -70,6 +70,10 @@
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     cell.delegate = self;
+    cell.moreBlock = ^(NSDictionary *dic,NSIndexPath *indexPath){
+        [self.showDictionary setObject:[dic objectForKey:@"isShow"] forKey:[NSString stringWithFormat:@"%@",[dic objectForKey:@"row"]]];
+        [self.rootTableView reloadData];
+    };
     [cell setCellContent:[self.dataArray objectAtIndex:indexPath.row] andIsShow:[[self.showDictionary objectForKey:[NSString stringWithFormat:@"%ld", indexPath.row]] boolValue]  andCellIndexPath:indexPath];
     return cell;
 

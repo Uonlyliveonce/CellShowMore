@@ -102,7 +102,7 @@
     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     [dic setObject:[NSNumber numberWithInteger:_theIndexPath.row] forKey:@"row"];
     [dic setObject:[NSNumber numberWithBool:_moreButton.selected] forKey:@"isShow"];
-    [self.delegate remarksCellShowContrntWithDic:dic andCellIndexPath:_theIndexPath];
+    self.moreBlock(dic,_theIndexPath);
 }
 
 - (void)awakeFromNib {
