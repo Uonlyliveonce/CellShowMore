@@ -1,0 +1,23 @@
+//
+//  PrefixHeader.pch
+//  CellShowMore
+//
+//  Created by 王昱斌 on 16/10/25.
+//  Copyright © 2016年 bingo. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+
+#define WIDTH [UIScreen mainScreen].bounds.size.width
+#define HEIGHT [UIScreen mainScreen].bounds.size.height
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "SDAutoLayout.h"
+
+#endif
+
+#endif /* PrefixHeader_pch */
